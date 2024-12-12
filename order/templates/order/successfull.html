@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block container %}
+        <div class="row">
+            <div class="col-md-12 cart_info">
+                    <div class="successful-order text-center">
+                        <img src="{% static 'images/guarantee.png' %}" alt="Order Confirmed" style="width: 50px; height: auto;">
+                        <h3 class="page-header">Thank you for you purchase!</h3>
+                    </div>
+                    <div class="ordered-info">
+                        <h5>OrderID: <span>#{{ order.razorpay_order_id }}</span></h5>
+                        <h5>Book: <span>{{ order.totalbook }}</span></h5>
+                        <h5>Name: <span>{{ order.name }}</span></h5>
+                        <h5>Phone: <span>{{ order.phone }}</span></h5>
+                        <h5>Email: <span>{{ order.email }}</span></h5>
+                        <h5>Transaction ID: <span>{{ order.razorpay_order_id }}</span></h5>
+                        <h5>Payment Method: <span>Razorpay</span></h5>
+                        <h5>Shipping address: <span>{{ order.division }}:{{ order.zip_code }}, {{ order.district }}, {{ order.address }}</span></h5>
+                    </div>
+                    <div class="download-info">
+                        <a href="{% url 'order:pdf' id=order.id %}">
+                            <img src="{% static 'images/pdf.png' %}" alt="Download" style="width: 50px; height: 50px;">
+                        </a>
+                    </div>
+            </div>
+        </div>
+{% endblock %}

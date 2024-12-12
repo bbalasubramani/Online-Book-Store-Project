@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Invoice</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Order Invoice</h1>
+                <p><strong>OrderID:</strong> {{ order.razorpay_order_id }}</p>
+                <p><strong>Book:</strong> {{ order.totalbook }}</p>
+                <p><strong>Name:</strong> {{ order.name }}</p>
+                <p><strong>Phone:</strong> {{ order.phone }}</p>
+                <p><strong>Email:</strong> {{ order.email }}</p>
+                <p><strong>Transaction ID:</strong> {{ order.razorpay_order_id }}</p>
+                <p><strong>Payment Method:</strong> Razorpay</p>
+                <p><strong>Shipping Address:</strong> {{ order.division }}:{{ order.zip_code }}, {{ order.district }}, {{ order.address }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

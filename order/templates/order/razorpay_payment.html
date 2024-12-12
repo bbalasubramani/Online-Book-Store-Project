@@ -1,0 +1,40 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block container %}
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+<script>
+  var options = {
+    "key": "{{ razorpay_merchant_key }}",
+    "amount": "{{ amount_in_paise }}", // Amount in paise
+    "currency": "INR",
+    "name": "Book Haven",
+    "description": "Order #{{ order.id }}",
+    "image": "{% static 'images/bookstore.png' %}",
+    "order_id": "{{ razorpay_order_id }}",
+    "handler": function (response) {
+      // Handle payment success
+      window.location.href = "/order/payment_success/" + response.razorpay_order_id;
+    },
+    "prefill": {
+      "name": "{{ order.name }}",
+      "email": "{{ order.email }}",
+      "contact_number": "{{ order.phone }}"
+    },
+    "notes": {
+      "address": "{{ order.address }}"
+    },
+    "theme": {
+      "color": "#3399cc"
+    }
+  };
+  var rzp1 = new Razorpay(options);
+  rzp1.on('payment.failed', function (response)  
+ {
+    // Handle payment failure
+    alert(response.error.code);
+  });
+  rzp1.open();
+</script>
+{% endblock %}
