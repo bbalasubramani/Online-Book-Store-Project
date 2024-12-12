@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Installation 
 
 
@@ -17,4 +17,4 @@
 =======
 # Online-Book-Store-Project
 This project creates a fully-functional online bookstore using Python and Django. Customers can browse, search, and purchase books, with features like filtering, shopping cart, secure checkout (PayPal/Stripe), order tracking, and reviews. The admin panel supports inventory management, order processing, and sales monitoring.
->>>>>>> 0920aa0273f517ecdbd6ddda167ef3761c8b0c53
+
