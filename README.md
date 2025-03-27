@@ -72,7 +72,7 @@ Contributions are welcome! Feel free to open issues or submit pull requests to i
 
 License
 
-This project is licensed under the MIT License. Feel free to modify and use it as needed.
+This project is licensed under the GNU General Public License (GPL). Feel free to modify and use it as needed.
 
 Connect with Me
 
