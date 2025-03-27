@@ -122,5 +122,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'order' / 'static',]
-RAZORPAY_KEY_ID = 'rzp_live_P7c4LzHDQf2Wt3'
-RAZORPAY_KEY_SECRET = 'pRx3VyG11wH6ONtQq41vZoym'
+RAZORPAY_KEY_ID = 'your-key-id'
+RAZORPAY_KEY_SECRET = 'your-secret-key'
