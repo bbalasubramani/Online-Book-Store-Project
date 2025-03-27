@@ -162,5 +162,5 @@ MESSAGE_TAGS = {
 }
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
-RAZORPAY_KEY_ID = 'rzp_live_P7c4LzHDQf2Wt3'
-RAZORPAY_KEY_SECRET = 'pRx3VyG11wH6ONtQq41vZoym'
+RAZORPAY_KEY_ID = 'your-key-id'
+RAZORPAY_KEY_SECRET = 'your-secret-id'
