@@ -40,3 +40,6 @@ django-weasyprint==0.5.4
 django-widget-tweaks==1.4.8
 djangorestframework==3.11.0
 djangorestframework-jwt==1.11.0
+dj-database-url==2.2.0
+gunicorn==22.0.0
+whitenoise==6.7.0
