@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: online-book-store-backend
+    runtime: python
+    plan: free
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py migrate
+    startCommand: gunicorn bookstore.wsgi:application
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        value: online-book-store-backend.onrender.com
+      - key: CSRF_TRUSTED_ORIGINS
+        value: https://online-book-store-backend.onrender.com
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://your-frontend-site.netlify.app
+      - key: WEB_CONCURRENCY
+        value: "2"
