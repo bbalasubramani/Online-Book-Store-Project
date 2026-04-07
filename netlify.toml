@@ -1,0 +1,10 @@
+# Use this file in your frontend repository if you deploy a SPA on Netlify.
+# Update `publish` for your framework output folder.
+
+[build]
+  publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
