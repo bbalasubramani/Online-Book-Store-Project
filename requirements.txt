@@ -10,7 +10,6 @@ django-channels==0.7.0
 django-ckeditor==6.0.0
 django-cleanup==5.2.0
 django-compressor==2.2
-django-cors-headers==2.4.0
 django-crispy-forms==1.8.1
 django-debug-toolbar==1.11
 django-encrypted-model-fields==0.5.8
