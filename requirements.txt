@@ -5,7 +5,6 @@ django-appconf==1.0.2
 django-bootstrap-form==3.4
 django-bootstrap4==0.0.8
 django-braces==1.13.0
-django-celery-beat==2.1.0
 django-channels==0.7.0
 django-ckeditor==6.0.0
 django-cleanup==5.2.0
